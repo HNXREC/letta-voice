@@ -21,7 +21,7 @@ async def entrypoint(ctx: agents.JobContext):
             agent_id=agent_id,
         ),
         stt=deepgram.STT(),
-        tts=cartesia.TTS(),
+        tts=deepgram.TTS(model="aura-2-jupiter-en),
     )
 
     await session.start(
@@ -29,7 +29,7 @@ async def entrypoint(ctx: agents.JobContext):
         agent=Agent(instructions=""), # instructions should be set in the Letta agent
     )
 
-    session.say("Hi, what's your name?")
+    session.say("Hi, I am Priyanshu's personal AI assistant how are you?")
     await ctx.connect(auto_subscribe=AutoSubscribe.AUDIO_ONLY)
 
 if __name__ == "__main__":
