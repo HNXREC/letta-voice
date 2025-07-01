@@ -21,7 +21,7 @@ async def entrypoint(ctx: agents.JobContext):
             agent_id=agent_id,
         ),
         stt=deepgram.STT(),
-        tts=deepgram.TTS(model="aura-2-jupiter-en),
+        tts=deepgram.TTS(model="aura-2-jupiter-en"),
     )
 
     await session.start(
